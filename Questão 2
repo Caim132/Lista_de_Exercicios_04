@@ -1,0 +1,13 @@
+def ordenar_vetor(vetor, crescente=True):
+    vetor.sort(reverse=not crescente)
+
+# Exemplo de uso:
+vetor = [64, 25, 12, 22, 11]
+
+# Ordenar em ordem crescente
+ordenar_vetor(vetor)
+print("Vetor ordenado crescente:", vetor)
+
+# Ordenar em ordem decrescente
+ordenar_vetor(vetor, crescente=False)
+print("Vetor ordenado decrescente:", vetor)
