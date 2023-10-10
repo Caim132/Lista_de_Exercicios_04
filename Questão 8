@@ -1,0 +1,21 @@
+def calcular_mediana(vetor):
+    vetor_ordenado = sorted(vetor)
+    tamanho = len(vetor_ordenado)
+
+    if tamanho % 2 == 1:  # Vetor tem um número ímpar de elementos
+        mediana = vetor_ordenado[tamanho // 2]
+    else:  # Vetor tem um número par de elementos
+        meio1 = vetor_ordenado[(tamanho // 2) - 1]
+        meio2 = vetor_ordenado[tamanho // 2]
+        mediana = (meio1 + meio2) / 2
+
+    return mediana
+
+# Exemplo de uso:
+vetor_impar = [64, 25, 12, 22, 11]
+mediana_impar = calcular_mediana(vetor_impar)
+print("Mediana (ímpar):", mediana_impar)
+
+vetor_par = [64, 25, 12, 22, 11, 30]
+mediana_par = calcular_mediana(vetor_par)
+print("Mediana (par):", mediana_par)
