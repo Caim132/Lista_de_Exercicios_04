@@ -1,0 +1,25 @@
+def encontrar_maximo_minimo(vetor):
+    if len(vetor) == 0:
+        return None, None
+
+    maximo = vetor[0]
+    minimo = vetor[0]
+
+    for elemento in vetor:
+        if elemento > maximo:
+            maximo = elemento
+        elif elemento < minimo:
+            minimo = elemento
+
+    return maximo, minimo
+
+# Exemplo de uso:
+vetor = [64, 25, 12, 22, 11]
+
+maximo, minimo = encontrar_maximo_minimo(vetor)
+
+if maximo is not None and minimo is not None:
+    print("Elemento máximo:", maximo)
+    print("Elemento mínimo:", minimo)
+else:
+    print("O vetor está vazio.")
